@@ -17,46 +17,67 @@ export const viewport: Viewport = {
   themeColor: "#CCD6E0",
 };
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://joshuaelizondo.vercel.app";
+
 export const metadata: Metadata = {
-  title: `${OWNER_NAME.split(" ")[0]} | Personal Portfolio`,
-  description: `${
-    OWNER_NAME.split(" ")[0]
-  } is a full-stack developer with experience in modern web technologies.`,
+  title: `${OWNER_NAME} | Full-Stack Developer Portfolio`,
+  description: `${OWNER_NAME} is a full-stack developer specializing in React, Next.js, TypeScript and modern web technologies. View my projects, skills, and experience.`,
   authors: [
     {
       name: OWNER_NAME,
       url: EXTRA_LINKS.github,
     },
-    {
-      name: "Sanidhya Kumar Verma",
-      url: "https://github.com/sanidhyy",
-    }
   ],
   keywords: [
+    OWNER_NAME,
+    "Joshua Elizondo",
+    "Joshua Elizondo Abarca",
+    "Joshua Elizondo portfolio",
+    "Joshua Elizondo developer",
+    "full-stack developer",
+    "frontend developer",
+    "backend developer",
+    "web developer",
     "reactjs",
     "nextjs",
-    "vercel",
-    "react",
-    "portfolio",
-    "portfolio-next",
-    "emailjs",
-    "framer-motion",
-    "react-hot-toast",
-    "react-icons",
-    "react-intersection-observer",
-    "react-vertical-timeline",
-    "tailwindcss",
-    "ui/ux",
-    "js",
-    "javascript",
     "typescript",
+    "javascript",
+    "tailwindcss",
+    "portfolio",
+    "node.js",
+    "python",
     "html",
     "css",
   ],
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: `${OWNER_NAME} | Full-Stack Developer Portfolio`,
+    description: `${OWNER_NAME} is a full-stack developer specializing in React, Next.js, and TypeScript. View my projects, skills, and experience.`,
+    siteName: `${OWNER_NAME} Portfolio`,
+    images: [
+      {
+        url: "/profile.png",
+        width: 800,
+        height: 800,
+        alt: `${OWNER_NAME} - Full-Stack Developer`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${OWNER_NAME} | Full-Stack Developer Portfolio`,
+    description: `${OWNER_NAME} is a full-stack developer specializing in React, Next.js, and TypeScript.`,
+    images: ["/profile.png"],
+  },
   manifest: "/manifest.json",
-  other: {
-    "google-site-verification":
-      process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_KEY!,
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_KEY,
   },
 };
 
@@ -65,8 +86,35 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: OWNER_NAME,
+    url: SITE_URL,
+    image: `${SITE_URL}/profile.png`,
+    jobTitle: "Full-Stack Developer",
+    sameAs: [
+      EXTRA_LINKS.linkedin,
+      EXTRA_LINKS.github,
+    ],
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "Full-Stack Development",
+    ],
+  };
+
   return (
     <html lang="en" className="!scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.className} bg-gray-50 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 text-gray-950 relative pt-28 sm:pt-36`}
       >
