@@ -8,7 +8,12 @@ import {
   FaDocker,
   FaBootstrap,
 } from "react-icons/fa";
-import { LuGraduationCap, LuShieldCheck, LuPencil, LuBot } from "react-icons/lu";
+import {
+  LuGraduationCap,
+  LuShieldCheck,
+  LuPencil,
+  LuBot,
+} from "react-icons/lu";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -63,7 +68,7 @@ export const LINKS = [
 export const EXTRA_LINKS = {
   linkedin: "https://www.linkedin.com/in/joshua-elizondo-abarca/",
   github: "https://github.com/JoshuaEA54",
-  resume: "/resume_joshua_2025.pdf",
+  resume: "/resume_joshua_2026.pdf",
   email: "joshuaeelizondo@gmail.com",
   source_code: "https://github.com/JoshuaEA54/portfolio",
 } as const;
