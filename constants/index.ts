@@ -97,20 +97,46 @@ export const EXPERIENCES_DATA = [
 
 export const PROJECTS_DATA = [
   {
+    title: "UNAColabora - Academic Collaboration Platform",
+    description:
+      "Platform that bridges the Universidad Nacional de Costa Rica with the private sector, enabling students and teachers to find and manage real-world collaboration opportunities.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Zustand",
+      "Tailwind CSS",
+      "REST API",
+      "RBAC",
+      "Multi-tenant",
+      "Docker",
+    ],
+    imageUrl: "/unacolabora.png",
+    projectUrl: "https://colabora.unasrb.org",
+  },
+  {
+    title: ":JCraft - Minecraft-Themed Programming Language",
+    description:
+      "An educational programming language with Minecraft-inspired syntax (Spanish keywords) built to lower the barrier to entry for children learning to code. Includes a full interpreter pipeline and an integrated IDE. Validated through classroom sessions and child interviews.",
+    tags: [
+      "Python",
+      "PySide6",
+      "Language Design",
+      "Interpreter",
+      "Compilers",
+      "Research",
+    ],
+    imageUrl: "/jcraft.png",
+    projectUrl: "https://github.com/JoshuaEA54/JCraft",
+  },
+  {
     title: "EduIA - AI-Powered Learning Platform",
     description:
       "Revolutionary educational platform reducing quiz creation time by 90%, and real-time student's feedback analysis by the AI.",
     tags: ["Next.js", "OpenAI", "WebSockets", "OAuth", "TypeScript", "Sanity"],
     imageUrl: "/eduIA.png",
     projectUrl: "https://eduia.up.railway.app/",
-  },
-  {
-    title: "Universities Management API",
-    description:
-      "A comprehensive RESTful API designed to facilitate the management of educational activities within university environments.",
-    tags: ["Java", "Spring", "JWT", "Swagger", "Docker", "Lombok"],
-    imageUrl: "/UniversitiesManagementAPI.png",
-    projectUrl: "#",
   },
 ] as const;
 
