@@ -8,7 +8,7 @@ import {
   FaDocker,
   FaBootstrap,
 } from "react-icons/fa";
-import { LuGraduationCap, LuShieldCheck, LuPencil } from "react-icons/lu";
+import { LuGraduationCap, LuShieldCheck, LuPencil, LuBot } from "react-icons/lu";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -69,6 +69,13 @@ export const EXTRA_LINKS = {
 } as const;
 
 export const EXPERIENCES_DATA = [
+  {
+    title: "AI Data Labeler, Aligner (Freelance)",
+    description:
+      "Part-time freelance AI Data Labeler for Aligner, contributing to the development of more reliable and accurate AI systems by evaluating code-related responses using real software engineering expertise.",
+    icon: React.createElement(LuBot),
+    date: "2026 - Present",
+  },
   {
     title: "Full-Stack Developer — Centro de Escritura UNA",
     description:
