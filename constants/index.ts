@@ -8,7 +8,7 @@ import {
   FaDocker,
   FaBootstrap,
 } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { LuGraduationCap, LuShieldCheck, LuPencil } from "react-icons/lu";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -70,18 +70,18 @@ export const EXTRA_LINKS = {
 
 export const EXPERIENCES_DATA = [
   {
-    title: "Full-Stack Developer in Training",
+    title: "Full-Stack Developer — Centro de Escritura UNA",
     description:
-      "Information Systems engineering student building production-grade apps. Created EduIA—an AI-powered learning platform featuring Google OAuth, JWT-secured APIs and real-time WebSocket sessions.",
-    icon: React.createElement(SiNextdotjs),
-    date: "2024 - Present",
+      "Platform for National University's Writing Center that manages bookings for tutoring, workshops, and academic resources for students. I modernized and configured the entire stack (Node.js + Express + React + MariaDB) with Docker, and led the migration from the AWS server to the university's local infrastructure.",
+    icon: React.createElement(LuPencil),
+    date: "2026 - Present",
   },
   {
-    title: "Electric Guitarist - Universidad Nacional Ensemble",
+    title: "SICS — Security Compliance Platform",
     description:
-      "Lead electric guitarist in the university ensemble, honing discipline and standout stage presence through weekly rehearsals and campus shows.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2024 - Present",
+      "Compliance web platform that gives Costa Rican businesses a structured way to evaluate their security posture against 6 international standards (ISO 27001, NIST CSF) and national law — making a process previously requiring expensive consultants accessible and guided. Built end-to-end with FastAPI, PostgreSQL, React/TypeScript, and Google OAuth in collaboration with the Vice-Dean of Universidad Nacional de Costa Rica.",
+    icon: React.createElement(LuShieldCheck),
+    date: "2026 - Present",
   },
   {
     title: "Calculus Tutor, Universidad Nacional",
