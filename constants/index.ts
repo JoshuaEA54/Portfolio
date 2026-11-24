@@ -4,38 +4,32 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaPython,
-  FaFigma,
   FaDocker,
-  FaBootstrap,
+  FaJava,
 } from "react-icons/fa";
 import {
   LuGraduationCap,
-  LuShieldCheck,
-  LuPencil,
   LuBot,
+  LuBriefcase,
+  LuCode2,
 } from "react-icons/lu";
 import {
   SiNextdotjs,
   SiTypescript,
   SiJavascript,
-  SiHtml5,
-  SiCss3,
   SiTailwindcss,
   SiPrisma,
   SiMysql,
   SiPostgresql,
-  SiSupabase,
   SiMongodb,
-  SiJest,
-  SiVercel,
-  SiJsonwebtokens,
-  SiZod,
-  SiFirebase,
   SiExpo,
   SiFastapi,
   SiTensorflow,
   SiSwagger,
-  SiOracle,
+  SiExpress,
+  SiOpenai,
+  SiScikitlearn,
+  SiGithub,
 } from "react-icons/si";
 
 export const LINKS = [
@@ -68,110 +62,105 @@ export const LINKS = [
 export const EXTRA_LINKS = {
   linkedin: "https://www.linkedin.com/in/joshua-elizondo-abarca/",
   github: "https://github.com/JoshuaEA54",
-  resume: "/resume_joshua_2026.pdf",
+  resume: "/Joshua_Elizondo_Resume.pdf",
   email: "joshuaeelizondo@gmail.com",
   source_code: "https://github.com/JoshuaEA54/portfolio",
 } as const;
 
 export const EXPERIENCES_DATA = [
   {
-    title: "AI Data Labeler, Aligner (Freelance)",
+    title: "Software Developer Intern — Prointec",
     description:
-      "Part-time freelance AI Data Labeler for Aligner, contributing to the development of more reliable and accurate AI systems by evaluating code-related responses using real software engineering expertise.",
+      "Developed, with a teammate, two integrated Odoo modules (Python, PostgreSQL) to control and monitor the company's proprietary modules across its clients' systems. Implemented a secure authorization and approval workflow with email notifications, and designed the communication between both modules before development, which allowed us to work in parallel.",
+    icon: React.createElement(LuBriefcase),
+    date: "Jul 2026 - Nov 2026",
+  },
+  {
+    title: "Full-Stack Developer, Research Assistant — Universidad Nacional",
+    description:
+      "Modernized and containerized an institutional academic management platform (Node.js, Express, React, MariaDB) and led its migration from AWS Lightsail to the university's own servers. Built a web platform (React, FastAPI, PostgreSQL) that helps companies assess their information security compliance with international standards such as ISO 27001 and NIST CSF. I also maintain two institutional websites.",
+    icon: React.createElement(LuCode2),
+    date: "Mar 2026 - Present",
+  },
+  {
+    title: "AI Code Evaluator — Alignerr (Freelance)",
+    description:
+      "Evaluated and compared code produced by AI coding assistants, applying software engineering judgment to assess correctness, quality and best practices, to improve how AI models write code.",
     icon: React.createElement(LuBot),
-    date: "2026 - Present",
+    date: "Feb 2026 - May 2026",
   },
   {
-    title: "Full-Stack Developer — Centro de Escritura UNA",
+    title: "Calculus Tutor — Universidad Nacional",
     description:
-      "Platform for National University's Writing Center that manages bookings for tutoring, workshops, and academic resources for students. I modernized and configured the entire stack (Node.js + Express + React + MariaDB) with Docker, and led the migration from the AWS server to the university's local infrastructure.",
-    icon: React.createElement(LuPencil),
-    date: "2026 - Present",
-  },
-  {
-    title: "SICS — Security Compliance Platform",
-    description:
-      "Compliance web platform that gives Costa Rican businesses a structured way to evaluate their security posture against 6 international standards (ISO 27001, NIST CSF) and national law — making a process previously requiring expensive consultants accessible and guided. Built end-to-end with FastAPI, PostgreSQL, React/TypeScript, and Google OAuth in collaboration with the Vice-Dean of Universidad Nacional de Costa Rica.",
-    icon: React.createElement(LuShieldCheck),
-    date: "2026 - Present",
-  },
-  {
-    title: "Calculus Tutor, Universidad Nacional",
-    description:
-      "Provided comprehensive calculus instruction to first-year engineering students and mentored students in problem-solving techniques and mathematical reasoning.",
+      "Taught calculus to first-year engineering students and mentored them in problem-solving and mathematical reasoning.",
     icon: React.createElement(LuGraduationCap),
-    date: "2023",
+    date: "Sep 2024 - Nov 2024",
   },
 ] as const;
 
-export const PROJECTS_DATA = [
+export const PROJECTS_DATA: readonly {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  imageUrl: string;
+  projectUrl?: string;
+}[] = [
   {
-    title: "UNAColabora - Academic Collaboration Platform",
+    title: "UNAColabora - University-Industry Collaboration Platform",
     description:
-      "Platform that bridges the Universidad Nacional de Costa Rica with the private sector, enabling students and teachers to find and manage real-world collaboration opportunities.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Prisma",
-      "Zustand",
-      "Tailwind CSS",
-      "REST API",
-      "RBAC",
-      "Multi-tenant",
-      "Docker",
-    ],
+      "A platform where companies and Universidad Nacional's students and teachers connect to work on real projects. Built with a teammate over three Systems Engineering courses, from requirements to production. I developed the dashboards for students, teachers, companies and admins, and the API routes behind them.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
     imageUrl: "/unacolabora.png",
     projectUrl: "https://colabora.unasrb.org",
   },
   {
-    title: ":JCraft - Minecraft-Themed Programming Language",
+    title: "Digital Kids - Progress Reporting Platform for a Daycare",
     description:
-      "An educational programming language with Minecraft-inspired syntax (Spanish keywords) built to lower the barrier to entry for children learning to code. Includes a full interpreter pipeline and an integrated IDE. Validated through classroom sessions and child interviews.",
-    tags: [
-      "Python",
-      "PySide6",
-      "Language Design",
-      "Interpreter",
-      "Compilers",
-      "Research",
-    ],
+      "A web platform for a daycare to share each child's progress with parents, replacing their paper notebooks. Built by a team of 20 students, where I was the Project Manager: I wrote the user stories, planned four two-week sprints across six teams, reviewed each change before integrating it, and re-scoped the project halfway through so we could deliver on time.",
+    tags: ["Project Management", "Agile", "Team of 20"],
+    imageUrl: "/digitalkids.png",
+    projectUrl: "https://invictuskids.com",
+  },
+  {
+    title: "JCraft - Minecraft-Themed Programming Language",
+    description:
+      "A programming language with Minecraft-inspired syntax in Spanish, designed to help children learn to code. Built with a teammate: lexer, parser, static type checker, interpreter and a desktop IDE. We tested it with 17 sixth-grade students (all learning objectives met; 15 of 16 wanted to keep coding) and presented the research at the XXXIII International Conference on Learning, University of Hong Kong.",
+    tags: ["Python", "PySide6", "Compilers", "Research"],
     imageUrl: "/jcraft.png",
     projectUrl: "https://github.com/JoshuaEA54/JCraft",
   },
   {
-    title: "EduIA - AI-Powered Learning Platform",
+    title: "EduIA - AI-Powered Quiz Platform for Classrooms",
     description:
-      "Revolutionary educational platform reducing quiz creation time by 90%, and real-time student's feedback analysis by the AI.",
-    tags: ["Next.js", "OpenAI", "WebSockets", "OAuth", "TypeScript", "Sanity"],
+      "A web app where teachers turn any study text into a quiz with the OpenAI API, run it live with their class and get an AI summary of where students struggled. Built with a teammate; teacher and student screens stay in sync in real time with Socket.IO.",
+    tags: ["Next.js", "TypeScript", "OpenAI API", "Socket.IO", "MongoDB"],
     imageUrl: "/eduIA.png",
-    projectUrl: "https://eduia.up.railway.app/",
   },
-] as const;
+];
 
 export const SKILLS_DATA = [
-  { name: "JavaScript", icon: React.createElement(SiJavascript) },
   { name: "TypeScript", icon: React.createElement(SiTypescript) },
+  { name: "JavaScript", icon: React.createElement(SiJavascript) },
   { name: "Python", icon: React.createElement(FaPython) },
+  { name: "Java", icon: React.createElement(FaJava) },
   { name: "React", icon: React.createElement(FaReact) },
   { name: "Next.js", icon: React.createElement(SiNextdotjs) },
+  { name: "Node.js", icon: React.createElement(FaNodeJs) },
+  { name: "Express", icon: React.createElement(SiExpress) },
+  { name: "FastAPI", icon: React.createElement(SiFastapi) },
   { name: "React Native", icon: React.createElement(SiExpo) },
   { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss) },
-  { name: "Bootstrap", icon: React.createElement(FaBootstrap) },
-  { name: "Node.js", icon: React.createElement(FaNodeJs) },
-  { name: "FastAPI", icon: React.createElement(SiFastapi) },
-  { name: "TensorFlow", icon: React.createElement(SiTensorflow) },
-  { name: "Prisma", icon: React.createElement(SiPrisma) },
   { name: "PostgreSQL", icon: React.createElement(SiPostgresql) },
   { name: "MySQL", icon: React.createElement(SiMysql) },
   { name: "MongoDB", icon: React.createElement(SiMongodb) },
-  { name: "Firebase", icon: React.createElement(SiFirebase) },
-  { name: "Supabase", icon: React.createElement(SiSupabase) },
-  { name: "Oracle DB", icon: React.createElement(SiOracle) },
+  { name: "Prisma", icon: React.createElement(SiPrisma) },
+  { name: "OpenAI API", icon: React.createElement(SiOpenai) },
+  { name: "scikit-learn", icon: React.createElement(SiScikitlearn) },
+  { name: "TensorFlow", icon: React.createElement(SiTensorflow) },
   { name: "Docker", icon: React.createElement(FaDocker) },
+  { name: "Git", icon: React.createElement(FaGitAlt) },
+  { name: "GitHub", icon: React.createElement(SiGithub) },
   { name: "Swagger", icon: React.createElement(SiSwagger) },
-  { name: "JWT", icon: React.createElement(SiJsonwebtokens) },
-  { name: "Zod", icon: React.createElement(SiZod) },
 ] as const;
 
 export const OWNER_NAME = "Joshua Elizondo Abarca";

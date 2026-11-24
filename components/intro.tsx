@@ -64,11 +64,11 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <b className="font-bold">Hi, I&apos;m {OWNER_NAME.split(" ")[0]}</b> — a{" "}
-        <b className="font-bold">passionate full-stack developer</b> and{" "}
-        <b className="font-bold">engineering student</b> who transforms{" "}
-        <i className="italic">innovative ideas into powerful web applications</i>. I specialize in{" "}
-        <u className="underline">Next.js, TypeScript, AI integration, and modern web technologies</u>.
+        <b className="font-bold">Hi, I&apos;m {OWNER_NAME.split(" ")[0]}</b>, a{" "}
+        <b className="font-bold">full-stack software engineer</b> from Costa Rica. I build web
+        applications with{" "}
+        <u className="underline">TypeScript, React, Node.js and Python</u>, and I&apos;m{" "}
+        <i className="italic">exploring AI and LLMs</i>.
       </motion.h1>
 
       <motion.div

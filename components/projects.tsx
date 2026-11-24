@@ -14,6 +14,19 @@ import SectionHeading from "./section-heading";
 // Define the ProjectProps type based on the PROJECTS_DATA structure.
 type ProjectProps = (typeof PROJECTS_DATA)[number];
 
+const PROJECT_IMAGE_CLASSES = `absolute hidden sm:block inset-y-0 my-auto -right-40 w-[28.25rem]
+  rounded-t-lg shadow-2xl group-even:right-[initial]
+  group-even:-left-40 group-hover:-translate-x-3
+  group-hover:translate-y-3 group-hover:-rotate-2
+  group-focus/project:-translate-x-3
+  group-focus/project:translate-y-3 group-focus/project:-rotate-2
+  group-even:group-focus/project:translate-x-3
+  group-even:group-focus/project:translate-y-3 group-even:group-focus/project:rotate-2
+  group-focus/project:scale-[1.04]
+  group-even:group-hover:translate-x-3
+  group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2
+  group-hover:scale-[1.04] transition`;
+
 // Define the Project component for displaying individual projects.
 const Project = ({
   title,
@@ -64,37 +77,33 @@ const Project = ({
           </ul>
         </div>
 
-        <Link
-          href={projectUrl}
-          target="_blank"
-          rel="noreferrer noopener"
-          title={`Visit Project: ${title}`}
-          className="group/project"
-        >
+        {projectUrl ? (
+          <Link
+            href={projectUrl}
+            target="_blank"
+            rel="noreferrer noopener"
+            title={`Visit Project: ${title}`}
+            className="group/project"
+          >
+            <Image
+              src={imageUrl}
+              alt={title}
+              width={480}
+              height={360}
+              quality={95}
+              className={PROJECT_IMAGE_CLASSES}
+            />
+          </Link>
+        ) : (
           <Image
             src={imageUrl}
             alt={title}
             width={480}
             height={360}
             quality={95}
-            className="absolute hidden sm:block inset-y-0 my-auto -right-40 w-[28.25rem]
-            rounded-t-lg shadow-2xl group-even:right-[initial] 
-            group-even:-left-40 group-hover:-translate-x-3
-            group-hover:translate-y-3 group-hover:-rotate-2
-
-            group-focus/project:-translate-x-3
-            group-focus/project:translate-y-3 group-focus/project:-rotate-2
-            group-even:group-focus/project:translate-x-3
-            group-even:group-focus/project:translate-y-3 group-even:group-focus/project:rotate-2
-            
-            group-focus/project:scale-[1.04]
-            
-            group-even:group-hover:translate-x-3
-            group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2
-            
-            group-hover:scale-[1.04] transition"
+            className={PROJECT_IMAGE_CLASSES}
           />
-        </Link>
+        )}
       </div>
     </motion.article>
   );
