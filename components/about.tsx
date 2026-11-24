@@ -21,36 +21,31 @@ const About = () => {
       <SectionHeading>About me</SectionHeading>
 
       <p className="mb-3">
-        I'm a <b className="font-medium">7th-semester Information Systems Engineering</b> student at
-        Universidad Nacional, Costa Rica (6/8 semesters completed successfully).
-        I specialize in <b className="font-medium">full-stack web development</b> with technologies like
-        <b className="font-medium"> Next.js, TypeScript, React, PostgreSQL, and Prisma</b>.
+        I&apos;ve been into technology for as long as I can remember, and what I enjoy most is
+        seeing an idea become something people actually use.
       </p>
 
       <p className="mb-3">
-        This semester I shipped <b className="font-medium">UNAColabora</b> (
-        <a href="https://colabora.unasrb.org" target="_blank" rel="noopener noreferrer" className="underline">
-          colabora.unasrb.org
-        </a>
-        ), an academic collaboration platform connecting UNA's university community with companies —
-        built with <b className="font-medium">Next.js, TypeScript, PostgreSQL, and Prisma</b>.
-        I'm also building <b className="font-medium">Plantia</b>, a mobile botanical diary in
-        <b className="font-medium"> React Native (Expo)</b> with a FastAPI + Firebase backend,
-        and training a <b className="font-medium">fraud detection model</b> using Python, TensorFlow,
-        and scikit-learn for my AI course.
+        I&apos;m finishing my degree in{" "}
+        <b className="font-medium">Information Systems Engineering</b> at Universidad Nacional,
+        where I spent the last couple of years building{" "}
+        <b className="font-medium">full-stack web applications</b> for real projects, both inside
+        the university and for a consulting firm.
       </p>
 
       <p className="mb-3">
-        In my research course I'm finalizing a study on <b className="font-medium">JCraft</b>, a
-        Minecraft-themed educational programming language I built in Python — complete with a
-        custom lexer, type checker, interpreter, and integrated IDE. The research involved real
-        sessions and interviews with children to evaluate its impact on learning to code.
+        I also enjoy the people side of software. As PM of{" "}
+        <b className="font-medium">Digital Kids</b>, I coordinated a team of 20 to deliver a
+        progress-reporting platform for a daycare. With <b className="font-medium">JCraft</b>, an
+        educational programming language we designed for children, I presented our research at
+        the University of Hong Kong.
       </p>
 
       <p>
-        I'm actively looking for <b className="font-medium">job opportunities, internships, and
-        freelance projects</b>. I'm driven by continuous learning, AI innovation, and building
-        tools that genuinely help people.
+        I work mainly with{" "}
+        <b className="font-medium">TypeScript, React, Node.js and Python</b>, and right now
+        I&apos;m learning to build applications with large language models. I&apos;m open to{" "}
+        <b className="font-medium">Software Engineer roles</b> and ready to start right away.
       </p>
     </motion.section>
   );

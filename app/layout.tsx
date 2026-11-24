@@ -21,8 +21,8 @@ const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://joshuaelizondo.vercel.app";
 
 export const metadata: Metadata = {
-  title: `${OWNER_NAME} | Full-Stack Developer Portfolio`,
-  description: `${OWNER_NAME} is a full-stack developer specializing in React, Next.js, TypeScript and modern web technologies. View my projects, skills, and experience.`,
+  title: `${OWNER_NAME} | Full-Stack Software Engineer`,
+  description: `${OWNER_NAME} is a full-stack software engineer from Costa Rica working with TypeScript, React, Node.js and Python. View his projects, experience and resume.`,
   authors: [
     {
       name: OWNER_NAME,
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     "Joshua Elizondo Abarca",
     "Joshua Elizondo portfolio",
     "Joshua Elizondo developer",
+    "software engineer",
+    "full-stack software engineer",
     "full-stack developer",
-    "frontend developer",
-    "backend developer",
-    "web developer",
+    "software engineer Costa Rica",
     "reactjs",
     "nextjs",
     "typescript",
@@ -57,22 +57,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: `${OWNER_NAME} | Full-Stack Developer Portfolio`,
-    description: `${OWNER_NAME} is a full-stack developer specializing in React, Next.js, and TypeScript. View my projects, skills, and experience.`,
+    title: `${OWNER_NAME} | Full-Stack Software Engineer`,
+    description: `${OWNER_NAME} is a full-stack software engineer from Costa Rica working with TypeScript, React, Node.js and Python.`,
     siteName: `${OWNER_NAME} Portfolio`,
     images: [
       {
         url: "/profile.png",
         width: 800,
         height: 800,
-        alt: `${OWNER_NAME} - Full-Stack Developer`,
+        alt: `${OWNER_NAME} - Full-Stack Software Engineer`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${OWNER_NAME} | Full-Stack Developer Portfolio`,
-    description: `${OWNER_NAME} is a full-stack developer specializing in React, Next.js, and TypeScript.`,
+    title: `${OWNER_NAME} | Full-Stack Software Engineer`,
+    description: `${OWNER_NAME} is a full-stack software engineer from Costa Rica working with TypeScript, React, Node.js and Python.`,
     images: ["/profile.png"],
   },
   manifest: "/manifest.json",
@@ -92,7 +92,7 @@ export default function RootLayout({
     name: OWNER_NAME,
     url: SITE_URL,
     image: `${SITE_URL}/profile.png`,
-    jobTitle: "Full-Stack Developer",
+    jobTitle: "Software Engineer",
     sameAs: [
       EXTRA_LINKS.linkedin,
       EXTRA_LINKS.github,
